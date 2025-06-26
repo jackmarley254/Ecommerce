@@ -26,9 +26,9 @@ STATIC_DIR=os.path.join(BASE_DIR,'static')
 SECRET_KEY = '#vw(03o=(9kbvg!&2d5i!2$_58x@_-3l4wujpow6(ym37jxnza'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ecommerce-4z42.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ecommerce-4z42.onrender.com', '.render.com']
 
 
 # Application definition
@@ -80,19 +80,23 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('postgresql://mypostgresqldatabase_3ovq_user:UeV3QNhYlfLwyALmmOHZqvpQQTn0H8hV@dpg-d1ek4ieuk2gs73ar1chg-a.oregon-postgres.render.com/mypostgresqldatabase_3ovq'), # Get DATABASE_URL from environment
-        conn_max_age=600
-    )
-}
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=os.environ.get('postgresql://mypostgresqldatabase_3ovq_user:UeV3QNhYlfLwyALmmOHZqvpQQTn0H8hV@dpg-d1ek4ieuk2gs73ar1chg-a/mypostgresqldatabase_3ovq'), # This will be the Render PostgreSQL URL
+            conn_max_age=600,
+            ssl_require=True # Most Render PostgreSQL databases require SSL
+        )
     }
-}
+else:
+    # Fallback to SQLite for local development
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
 
 
 # Password validation

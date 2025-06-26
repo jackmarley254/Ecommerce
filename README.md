@@ -90,5 +90,5 @@ This project is developed for demo purpose and it's not supposed to be used in r
 
 ## Feedback
 Any suggestion and feedback is welcome. You can message me on facebook
-- [Contact on Facebook](https://fb.com/)
-- [Subscribe my Channel LazyCoder On Youtube](https://youtube.com/@prestigetechofficial)
+- [Contact on Facebook](https://fb.com/jacky.tabz/)
+- [Subscribe my Channel Prestigetech Official On Youtube](https://youtube.com/@prestigetechofficial)

@@ -1,5 +1,5 @@
 # ECOMMERCE
-![developer](https://img.shields.io/badge/Developed%20By%20%3A-Sumit%20Kumar-red)
+![developer](https://img.shields.io/badge/Developed%20By%20%3A-Jack%20Ndiritu-red)
 ---
 ## screenshots
 ### Admin Dashboard
@@ -86,9 +86,9 @@ https://myaccount.google.com/lesssecureapps
 This project is developed for demo purpose and it's not supposed to be used in real application.
 
 ## Contributor
-- [Raxa](https://github.com/raxa217)
+- 
 
 ## Feedback
 Any suggestion and feedback is welcome. You can message me on facebook
-- [Contact on Facebook](https://fb.com/sumit.luv)
-- [Subscribe my Channel LazyCoder On Youtube](https://youtube.com/lazycoders)
+- [Contact on Facebook](https://fb.com/)
+- [Subscribe my Channel LazyCoder On Youtube](https://youtube.com/@prestigetechofficial)

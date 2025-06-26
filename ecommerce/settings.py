@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('postgresql://mypostgresqldatabase_3ovq_user:UeV3QNhYlfLwyALmmOHZqvpQQTn0H8hV@dpg-d1ek4ieuk2gs73ar1chg-a/mypostgresqldatabase_3ovq'), # Get DATABASE_URL from environment
+        default=os.environ.get('postgresql://mypostgresqldatabase_3ovq_user:UeV3QNhYlfLwyALmmOHZqvpQQTn0H8hV@dpg-d1ek4ieuk2gs73ar1chg-a.oregon-postgres.render.com/mypostgresqldatabase_3ovq'), # Get DATABASE_URL from environment
         conn_max_age=600
     )
 }

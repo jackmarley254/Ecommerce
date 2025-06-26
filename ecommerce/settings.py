@@ -26,9 +26,9 @@ STATIC_DIR=os.path.join(BASE_DIR,'static')
 SECRET_KEY = '#vw(03o=(9kbvg!&2d5i!2$_58x@_-3l4wujpow6(ym37jxnza'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ecommerce-4z42.onrender.com', '.render.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ecommerce-4z42.onrender.com']
 
 
 # Application definition
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.config(
-            default=os.environ.get('postgresql://mypostgresqldatabase_3ovq_user:UeV3QNhYlfLwyALmmOHZqvpQQTn0H8hV@dpg-d1ek4ieuk2gs73ar1chg-a/mypostgresqldatabase_3ovq'), # This will be the Render PostgreSQL URL
+            default=os.environ.get('DATABASE_URL'), # This will be the Render PostgreSQL URL
             conn_max_age=600,
             ssl_require=True # Most Render PostgreSQL databases require SSL
         )

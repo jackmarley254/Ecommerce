@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -78,6 +79,13 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.environ.get('postgresql://mypostgresqldatabase_3ovq_user:UeV3QNhYlfLwyALmmOHZqvpQQTn0H8hV@dpg-d1ek4ieuk2gs73ar1chg-a/mypostgresqldatabase_3ovq'), # Get DATABASE_URL from environment
+        conn_max_age=600
+    )
+}
 
 DATABASES = {
     'default': {
